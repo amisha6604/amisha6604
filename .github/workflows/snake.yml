@@ -1,0 +1,23 @@
+# OPTIONAL: generates an animated contribution "snake" onto an `output` branch.
+# Run manually once (Actions tab), then uncomment the snake block in README.md.
+name: Generate Snake
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+permissions:
+  contents: write
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: dist/github-contribution-grid-snake.svg?color_snake=#6B5B95&color_dots=#EFE7FA,#E6DCF5,#C9B6EC,#8E7CC3,#6B5B95
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
