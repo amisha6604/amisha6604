@@ -11,7 +11,7 @@
 
 <br>
 
-*Building things, solving problems & figuring out how everything works.*
+*Exploring code, cells & creativity.*
 
 **[GitHub](https://github.com/amisha6604)**
 <!-- TODO: add LinkedIn →  &nbsp;·&nbsp; **[LinkedIn](https://www.linkedin.com/in/YOUR-HANDLE)** -->
